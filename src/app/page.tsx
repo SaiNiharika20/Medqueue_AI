@@ -9,22 +9,39 @@ import { StatCard } from '@/components/stat-card';
 import { QueueTable } from '@/components/queue-table';
 import { Announcements } from '@/components/announcements';
 import { PatientFlowChart } from '@/components/patient-flow-chart';
-import { Clock, Users, Stethoscope, Activity } from 'lucide-react';
+import { Clock, Users, Stethoscope, Activity, HeartPulse } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function DashboardPage() {
   return (
-    <div className="flex-1 overflow-y-auto">
-      <div
-        className="relative flex h-[400px] flex-col items-center justify-center bg-cover bg-center text-white"
-        style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
-        data-ai-hint="hospital waiting room"
-      >
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold tracking-tight">MedQueue AI</h1>
-          <p className="mt-4 text-lg">AI-Powered Patient Queue Management</p>
+    <div className="flex-1 overflow-y-auto bg-background">
+      <section className="relative h-[450px] w-full">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://placehold.co/1920x1080.png')" }}
+          data-ai-hint="hospital waiting room"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
+          <HeartPulse className="h-24 w-24 text-primary" />
+          <h1 className="mt-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl">
+            Welcome to MedQueue AI
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+            Efficiently manage patient flow, predict wait times, and enhance
+            clinic operations with the power of AI.
+          </p>
+          <div className="mt-8 flex gap-4">
+            <Button asChild size="lg">
+              <Link href="/check-in">Patient Check-in</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/wait-time-predictor">Predict Wait Times</Link>
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
 
       <main className="p-4 md:p-8">
         <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">

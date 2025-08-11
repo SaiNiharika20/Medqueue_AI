@@ -40,10 +40,11 @@ export function QueueTable() {
                 <TableCell className="font-medium">{patient.name}</TableCell>
                 <TableCell>
                   <Badge
+                    variant="outline"
                     className={cn({
-                      'bg-yellow-500/20 text-yellow-700 hover:bg-yellow-500/30': patient.status === 'Waiting',
-                      'bg-blue-500/20 text-blue-700 hover:bg-blue-500/30': patient.status === 'In-progress',
-                      'bg-green-500/20 text-green-700 hover:bg-green-500/30': patient.status === 'Completed',
+                      'border-yellow-500/80 text-yellow-600 bg-yellow-500/10': patient.status === 'Waiting',
+                      'border-blue-500/80 text-blue-600 bg-blue-500/10': patient.status === 'In-progress',
+                      'border-green-500/80 text-green-600 bg-green-500/10': patient.status === 'Completed',
                     })}
                   >
                     {patient.status}
