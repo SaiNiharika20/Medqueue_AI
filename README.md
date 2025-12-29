@@ -32,3 +32,28 @@ It reduces patient waiting time and improves operational efficiency by managing 
 
 ## 📂 Project Structure
 
+MedQueue_AI/
+├── .idx/                     # Firebase Studio configuration
+├── docs/                     # Project documentation and references
+├── src/                      # Main application source code
+│   ├── app/                  # Next.js App Router
+│   ├── components/           # Reusable UI components
+│   ├── styles/               # Global and component styles
+│   ├── utils/                # Helper functions and utilities
+│   └── firebase/             # Firebase configuration and services
+├── .gitignore                # Git ignored files
+├── README.md                 # Project documentation
+├── apphosting.yaml           # Firebase hosting configuration
+├── components.json           # UI component configuration
+├── next.config.ts            # Next.js configuration
+├── package.json              # Project dependencies
+├── package-lock.json         # Dependency lock file
+├── postcss.config.mjs        # PostCSS configuration
+├── tailwind.config.ts        # Tailwind CSS configuration
+└── tsconfig.json             # TypeScript configuration
+
+## 🚀 Outcome
+- Gained hands-on experience with NLP
+- Learned sentiment analysis workflow
+- Improved text processing skills
+
